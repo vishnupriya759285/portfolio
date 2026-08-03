@@ -34,12 +34,12 @@ export default function SectionFrame({
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
           {eyebrow ? (
-            <p className="mb-3 font-mono text-xs tracking-[0.28em] text-violet-300/80 uppercase">
+            <p className="mb-3 font-mono text-sm tracking-[0.28em] text-violet-300/80 uppercase">
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">{title}</h2>
-          {description ? <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70 md:text-base">{description}</p> : null}
+          <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">{title}</h2>
+          {description ? <p className="mt-4 max-w-3xl text-base leading-8 text-white/70 md:text-lg md:leading-9">{description}</p> : null}
         </div>
         <div className={contentClassName}>{children}</div>
       </div>

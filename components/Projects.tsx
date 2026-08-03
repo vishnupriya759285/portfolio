@@ -58,9 +58,9 @@ export default function Projects() {
                     <Icon size={18} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white md:text-xl">{project.title}</h3>
+                    <h3 className="text-xl font-semibold text-white md:text-2xl">{project.title}</h3>
                     {project.achievement ? (
-                      <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/20 bg-[#a78bfa]/5 px-3 py-1 text-[11px] font-medium tracking-wide text-[#c4b5fd]/80">
+                      <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/20 bg-[#a78bfa]/5 px-3 py-1 text-xs font-medium tracking-wide text-[#c4b5fd]/80">
                         {BadgeIcon ? <BadgeIcon size={12} className="text-[#a78bfa]" /> : null}
                         {project.achievement}
                       </div>
@@ -73,14 +73,14 @@ export default function Projects() {
                 {project.tech.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[11px] tracking-wide text-white/70"
+                    className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs tracking-wide text-white/70"
                   >
                     {item}
                   </span>
                 ))}
               </div>
 
-              <p className="mt-5 text-sm leading-7 text-white/65">{project.description}</p>
+              <p className="mt-5 text-base leading-8 text-white/65">{project.description}</p>
             </motion.article>
           );
         })}

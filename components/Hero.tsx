@@ -83,23 +83,26 @@ export default function Hero() {
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative z-20 flex items-center justify-between px-6 py-5 md:px-10"
+        className="relative z-20 flex items-center justify-between px-6 py-6 md:px-12"
       >
-        <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-sm font-medium">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/30 bg-white/5 text-base font-extrabold text-white">
           V
         </div>
-        <ul className="hidden items-center gap-8 text-xs font-medium tracking-wide text-white/80 md:flex">
+        <ul className="hidden items-center gap-10 text-sm font-bold tracking-widest text-white/90 md:flex lg:text-base">
           {["HOME", "ABOUT", "PROJECTS", "SKILLS", "EXPERIENCE", "CONTACT"].map(
             (item) => (
-              <li key={item} className="cursor-pointer transition hover:text-white">
-                {item}
+              <li key={item} className="cursor-pointer transition hover:text-[#34d399]">
+                <a href={`#${item.toLowerCase()}`}>{item}</a>
               </li>
             )
           )}
         </ul>
-        <button className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-black transition hover:bg-white/90">
+        <a
+          href="#contact"
+          className="rounded-full bg-white px-6 py-2.5 text-sm font-extrabold text-black transition hover:bg-white/90 md:text-base"
+        >
           LET'S CONNECT
-        </button>
+        </a>
       </motion.nav>
 
       {/* Hero content */}
@@ -147,10 +150,13 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.5 }}
           className="mt-10"
         >
-          <button className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-black transition hover:gap-4 hover:bg-white/90 md:text-lg">
+          <a
+            href="#projects"
+            className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-black transition hover:gap-4 hover:bg-white/90 md:text-lg"
+          >
             EXPLORE MY WORK
             <ArrowRight size={20} className="transition group-hover:translate-x-1" />
-          </button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -180,21 +186,26 @@ export default function Hero() {
         initial={{ opacity: 0, x: 10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="absolute right-10 top-24 z-20 hidden max-w-[280px] text-right text-base leading-relaxed text-white/70 lg:block"
+        className="absolute right-10 top-24 z-20 hidden max-w-[340px] text-right text-lg font-medium leading-snug text-white/90 lg:block xl:text-xl"
       >
-        // Building Intelligent Automations. Designing Impact. Creating the{" "}
-        <span className="text-[#a78bfa] font-medium">Future</span>.
+        Building Intelligent Automations. Designing Impact. Creating the{" "}
+        <span className="font-bold text-[#a78bfa]">Future</span>.
       </motion.div>
 
-      {/* Availability badge */}
+      {/* Availability highlight box for recruiters */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="absolute right-10 top-52 z-20 hidden items-center gap-2 text-xs font-medium text-white/70 lg:flex"
+        className="absolute right-10 top-52 z-20 hidden items-center gap-3 rounded-2xl border border-[#34d399]/40 bg-[#34d399]/15 px-5 py-3 shadow-lg shadow-[#34d399]/10 backdrop-blur-md lg:flex"
       >
-        <span className="h-2 w-2 animate-pulse rounded-full bg-mint" />
-        AVAILABLE FOR WORK
+        <span className="relative flex h-3 w-3">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#34d399] opacity-75" />
+          <span className="relative inline-flex h-3 w-3 rounded-full bg-[#34d399]" />
+        </span>
+        <span className="text-sm font-extrabold tracking-wider text-[#34d399]">
+          AVAILABLE FOR WORK
+        </span>
       </motion.div>
 
       {/* Bottom bar: scroll indicator + social links */}
@@ -205,21 +216,28 @@ export default function Hero() {
         className="absolute bottom-6 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-10"
       >
         <div />
-        <div className="flex flex-col items-center gap-1 text-[10px] tracking-[0.2em] text-white/50">
-          <div className="h-6 w-px animate-pulse bg-white/40" />
+        <div className="flex flex-col items-center gap-1 text-[11px] font-bold tracking-[0.2em] text-white/60">
+          <div className="h-6 w-px animate-pulse bg-white/50" />
           SCROLL DOWN
         </div>
-        <div className="flex items-center gap-3">
-          <span className="mr-2 hidden text-[10px] font-medium tracking-[0.2em] text-white/50 sm:inline">
+        <div className="flex items-center gap-4">
+          <span className="mr-2 hidden text-xs font-bold tracking-[0.22em] text-white/70 sm:inline">
             CONNECT WITH ME
           </span>
-          {[Github, Linkedin, Mail, ArrowUpRight].map((Icon, idx) => (
+          {[
+            { Icon: Github, href: "https://github.com/vishnupriya759285", target: "_blank" },
+            { Icon: Linkedin, href: "https://linkedin.com/in/vishnupriya-m-v", target: "_blank" },
+            { Icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=v74641001@gmail.com", target: "_blank" },
+            { Icon: ArrowUpRight, href: "/resume.pdf", target: "_blank" },
+          ].map(({ Icon, href, target }, idx) => (
             <a
               key={idx}
-              href="#"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-white/50 hover:text-white"
+              href={href}
+              target={target}
+              rel={target ? "noreferrer" : undefined}
+              className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/30 bg-white/5 text-white/90 transition hover:scale-110 hover:border-white hover:bg-white/10 hover:text-white md:h-12 md:w-12"
             >
-              <Icon size={14} />
+              <Icon size={22} />
             </a>
           ))}
         </div>

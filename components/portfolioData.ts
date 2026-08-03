@@ -239,7 +239,7 @@ export const journeyEntries = [
 export const learningTopics = ["AI Agents", "MCP", "LangGraph", "Kubernetes", "Agentic AI", "System Design", "RAG"];
 
 export const contactItems = [
-  { label: "Email", value: "v74641001@gmail.com", href: "mailto:v74641001@gmail.com" },
+  { label: "Email", value: "v74641001@gmail.com", href: "https://mail.google.com/mail/?view=cm&fs=1&to=v74641001@gmail.com" },
   { label: "LinkedIn", value: "Vishnupriya M V", href: "https://www.linkedin.com/in/vishnupriya-m-v/" },
   { label: "GitHub", value: "vishnupriya759285", href: "https://github.com/vishnupriya759285" },
   { label: "Location", value: "Thrissur, Kerala, India" },

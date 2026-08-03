@@ -44,7 +44,7 @@ export default function Certifications() {
 
           return (
             <div key={category}>
-              <p className="mb-4 font-mono text-xs tracking-[0.24em] text-[#a78bfa] uppercase">{category}</p>
+              <p className="mb-4 font-mono text-sm tracking-[0.24em] text-[#a78bfa] uppercase">{category}</p>
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {categoryItems.map((item) => {
                   const index = certifications.findIndex((cert) => cert.title === item.title);
@@ -64,9 +64,9 @@ export default function Certifications() {
                           <Icon size={18} />
                         </div>
                         <div className="min-w-0">
-                          <h3 className="text-base font-semibold text-white md:text-lg">{item.title}</h3>
-                          <p className="mt-2 text-sm text-white/65">{item.issuer}</p>
-                          <span className="mt-3 inline-flex rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[11px] tracking-wide text-white/65">
+                          <h3 className="text-lg font-semibold text-white md:text-xl">{item.title}</h3>
+                          <p className="mt-2 text-base text-white/65">{item.issuer}</p>
+                          <span className="mt-3 inline-flex rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs tracking-wide text-white/65">
                             {item.status}
                           </span>
                         </div>

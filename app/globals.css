@@ -13,6 +13,35 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Custom cursor: hide OS cursor on fine-pointer (mouse) devices */
+@media (pointer: fine) {
+  html {
+    cursor: none !important;
+  }
+  /* Disable text selection so dragging doesn't highlight content */
+  p, h1, h2, h3, h4, h5, h6,
+  span, li, td, th, pre, code,
+  blockquote, label, div, section,
+  article, main, aside {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: none;
+  }
+  /* Restore native pointer for links & buttons */
+  a, button, [role="button"], input,
+  textarea, select, summary {
+    cursor: none;
+  }
+  /* CTAs restore native hand cursor */
+  a[href*="resume.pdf"],
+  a[href^="mailto:"],
+  a[href*="mail.google.com"],
+  #download-resume-btn,
+  #say-hello-btn {
+    cursor: pointer !important;
+  }
+}
+
 /* Blinking cursor for the typewriter effect */
 .typewriter-cursor {
   display: inline-block;
