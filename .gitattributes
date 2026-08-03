@@ -1,0 +1,3 @@
+# Ensure binary files (like PDFs) are never altered by Git line-ending conversions (LF/CRLF)
+*.pdf binary
+public/resume.pdf binary
