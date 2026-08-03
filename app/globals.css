@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html, body {
+  background: #0a0a0c;
+  color: #f5f5f7;
+  overflow-x: hidden;
+}
+
+/* Blinking cursor for the typewriter effect */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 4px;
+  background: linear-gradient(180deg, #a78bfa, #e879f9);
+  animation: blink 0.85s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Respect reduced-motion users: skip blink animation, just show a steady cursor */
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-cursor {
+    animation: none;
+    opacity: 1;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.hero-video {
+  filter: brightness(0.55) contrast(1.05);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #e9d5ff 50%, #f5d0fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
