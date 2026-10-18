@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight, ArrowRight } from "lucide-react";
+import { profileLinks } from "./portfolioData";
 
 const NAME = "Vishnupriya M V";
 
@@ -101,7 +102,7 @@ export default function Hero() {
           href="#contact"
           className="rounded-full bg-white px-6 py-2.5 text-sm font-extrabold text-black transition hover:bg-white/90 md:text-base"
         >
-          LET'S CONNECT
+          LET&apos;S CONNECT
         </a>
       </motion.nav>
 
@@ -122,7 +123,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="text-3xl font-medium text-white/85 sm:text-4xl md:text-5xl"
         >
-          Hi, I'm
+          Hi, I&apos;m
         </motion.p>
 
         {/* Typewriter name — the ONLY animated-per-character element */}
@@ -225,16 +226,17 @@ export default function Hero() {
             CONNECT WITH ME
           </span>
           {[
-            { Icon: Github, href: "https://github.com/vishnupriya759285", target: "_blank" },
-            { Icon: Linkedin, href: "https://linkedin.com/in/vishnupriya-m-v", target: "_blank" },
-            { Icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=v74641001@gmail.com", target: "_blank" },
-            { Icon: ArrowUpRight, href: "/resume.pdf", target: "_blank" },
-          ].map(({ Icon, href, target }, idx) => (
+            { label: "GitHub", Icon: Github, href: profileLinks.github, target: "_blank" },
+            { label: "LinkedIn", Icon: Linkedin, href: profileLinks.linkedin, target: "_blank" },
+            { label: "Email Vishnupriya", Icon: Mail, href: profileLinks.email, target: "_blank" },
+            { label: "Open resume", Icon: ArrowUpRight, href: profileLinks.resume, target: "_blank" },
+          ].map(({ label, Icon, href, target }) => (
             <a
-              key={idx}
+              key={label}
               href={href}
               target={target}
-              rel={target ? "noreferrer" : undefined}
+              rel={target ? "noopener noreferrer" : undefined}
+              aria-label={label}
               className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/30 bg-white/5 text-white/90 transition hover:scale-110 hover:border-white hover:bg-white/10 hover:text-white md:h-12 md:w-12"
             >
               <Icon size={22} />

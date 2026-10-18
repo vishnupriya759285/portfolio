@@ -9,6 +9,18 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Live GitHub projects
+
+The Featured Projects section automatically displays up to six recently pushed public repositories from `vishnupriya759285`. A repository is included when it is not a fork or archive, is not this portfolio/profile repository, and its `README.md` contains a `# Project Title` plus a meaningful opening paragraph.
+
+Create a fine-grained GitHub personal access token with read-only repository access and add it locally to `.env.local`:
+
+```env
+GITHUB_TOKEN=your_token_here
+```
+
+In Vercel, add the same key as a **Secret** for Production and Preview. Do not use a `NEXT_PUBLIC_` prefix. Project data is cached for five minutes, so qualifying newly pushed repositories appear automatically without redeploying the portfolio.
+
 ## Add your video
 
 Drop your keyboard-typing clip at:

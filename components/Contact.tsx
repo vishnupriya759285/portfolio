@@ -25,12 +25,12 @@ export default function Contact() {
 
             {/* Headline with larger typography */}
             <h3 className="mt-6 text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
-              Let's build something <span className="gradient-text">meaningful</span> together.
+              Let&apos;s build something <span className="gradient-text">meaningful</span> together.
             </h3>
 
             {/* Sub-description with larger font */}
             <p className="mt-5 text-base leading-relaxed text-white/80 sm:text-lg">
-              Have an interesting idea, collaboration opportunity, internship, or AI automation project in mind? I'd love to connect and bring it to life.
+              Have an interesting idea, collaboration opportunity, internship, or AI automation project in mind? I&apos;d love to connect and bring it to life.
             </p>
 
             {/* Structured Info Grid */}
@@ -56,7 +56,7 @@ export default function Contact() {
               id="say-hello-btn"
               href="https://mail.google.com/mail/?view=cm&fs=1&to=v74641001@gmail.com&su=Hello%20Vishnupriya"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-base font-bold text-black transition hover:bg-white/90"
             >
               <Mail size={18} />
@@ -85,7 +85,7 @@ export default function Contact() {
             }
 
             return (
-              <a key={item.label} href={item.href} className="block" download={item.href === "/resume.pdf" ? true : undefined} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
+              <a key={item.label} href={item.href} className="block" download={item.href === "/resume.pdf" ? true : undefined} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}>
                 {row}
               </a>
             );
