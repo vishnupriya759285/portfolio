@@ -14,13 +14,7 @@ import MyJourney from "@/components/MyJourney";
 import Projects from "@/components/Projects";
 import ResumeCTA from "@/components/ResumeCTA";
 import TechnicalSkills from "@/components/TechnicalSkills";
-import { getFeaturedProjects } from "@/lib/github";
-
-export const revalidate = 300;
-
-export default async function Home() {
-  const projects = await getFeaturedProjects();
-
+export default function Home() {
   return (
     <main>
       <div id="home">
@@ -29,7 +23,7 @@ export default async function Home() {
       <GlassShards />
 
       <About />
-      <Projects projects={projects} />
+      <Projects />
       <CareerJourney />
       <TechnicalSkills />
       <ExperienceHighlights />

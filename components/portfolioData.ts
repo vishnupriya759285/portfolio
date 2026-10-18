@@ -11,6 +11,48 @@ export const aboutStats = [
   { value: "3", label: "Internships" },
 ];
 
+export const projects = [
+  {
+    title: "Bus Connect",
+    tech: ["Flutter", "Dart", "Firebase", "Google Maps API", "GPS"],
+    description:
+      "A real-time bus tracking app with live location on an interactive map. Firebase Auth + Firestore for real-time sync of location/route data, ETA tracking, route visualization.",
+  },
+  {
+    title: "Smart Rural Area Issue Management System",
+    tech: ["Full-Stack"],
+    description:
+      "Platform for rural panchayats to manage civic issues, notices, events, welfare schemes. Citizens report issues, QR-code event registration, pension/welfare info access. Won against teams across Kerala.",
+    achievement: "First Prize, TinkHerHack 4.0",
+  },
+  {
+    title: "ETLAB+ Smart Academic Advisor",
+    tech: ["Java", "REST APIs", "JWT Authentication"],
+    description:
+      "JWT auth, encrypted ETLab token management, RESTful APIs, OOP architecture.",
+    achievement: "Best College Project Award",
+  },
+  {
+    title: "AI Buddy",
+    tech: ["Flask", "Python", "NLP"],
+    description:
+      "AI support platform to help identify/support at-risk students. Conversational AI, early intervention, NLP interaction flows, responsive frontend.",
+  },
+  {
+    title: "Tech Mentor Platform",
+    tech: ["Full-Stack"],
+    description:
+      "Mentorship platform connecting students with industry mentors. Rapid hackathon prototype, Top 5 of 100+ teams at Techlathlon (ICT Kerala, Infopark).",
+    achievement: "Top 5 Finalist, Techlathlon",
+  },
+  {
+    title: "Banana Curvature Detection System",
+    tech: ["Python", "OpenCV", "Flask"],
+    description:
+      "Computer vision system analyzing banana curvature via image processing/shape analysis — calculates curvature, quality ranking, auto-generates certificates.",
+  },
+];
+
 export const profileLinks = {
   email: "https://mail.google.com/mail/?view=cm&fs=1&to=v74641001@gmail.com",
   github: "https://github.com/vishnupriya759285",
