@@ -22,7 +22,6 @@ export default function Projects({ projects }: ProjectsProps) {
       id="projects"
       eyebrow="LIVE GITHUB PROJECTS"
       title="Featured Projects"
-      description="My latest public work, automatically selected from clear project READMEs on GitHub."
     >
       {projects.length > 0 ? (
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
